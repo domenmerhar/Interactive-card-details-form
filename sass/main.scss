@@ -1,6 +1,9 @@
 @import "partials/_variables";
 @import "partials/_typography";
 
+@import "partials/cardContainer/_cardBack";
+@import "partials/cardContainer/_cardFront";
+
 * {
   padding: 0;
   margin: 0;
