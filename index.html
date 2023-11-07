@@ -82,27 +82,31 @@
             >Exp. Date (MM/YY)</label
           >
           <input
-            type="text"
+            type="number"
             id="exp-date"
             class="input-container__form__input"
             placeholder="MM"
             input="numeric"
             maxlength="2"
             required
+            max="12"
+            min="1"
           />
           <input
-            type="text"
+            type="number"
             id="exp-date"
             class="input-container__form__input"
             placeholder="YY"
             input="numeric"
             maxlength="2"
             required
+            max="99"
+            min="0"
           />
 
           <label for="cvc" class="input-container__form__label">CVC</label>
           <input
-            type="text"
+            type="number"
             id="cvc"
             class="input-container__form__input"
             placeholder="e.g. 123"
