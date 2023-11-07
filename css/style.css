@@ -9,10 +9,15 @@ body {
 .card-container-front {
   position: relative;
   color: white; }
+  .card-container-front__card-number {
+    position: absolute;
+    bottom: 4.5rem;
+    left: 1rem;
+    font-size: 2rem; }
 
 .card-bottom-container {
   position: absolute;
-  bottom: 3rem;
+  bottom: 2rem;
   left: 1rem;
   display: flex;
   justify-content: space-between;
