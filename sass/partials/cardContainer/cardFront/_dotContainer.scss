@@ -1,0 +1,23 @@
+.dot-container {
+  top: 1rem;
+  left: 1rem;
+
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+
+  &__dot--full {
+    width: $dot--big;
+    height: $dot--big;
+    background-color: $white;
+    border-radius: 50%;
+  }
+
+  &__dot--empty {
+    width: $dot-small;
+    height: $dot-small;
+    background-color: transparent;
+    border: 1px solid $white;
+    border-radius: 50%;
+  }
+}

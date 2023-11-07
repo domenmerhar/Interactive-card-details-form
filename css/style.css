@@ -6,21 +6,31 @@ main {
 body {
   font-size: 1.6rem; }
 
-.card-container-front *:not(:nth-child(1)) {
+.card-container-front > *:not(:nth-child(1)) {
   position: absolute; }
 
 .card-container-front__front-img {
   display: relative; }
 
-.card-container-front__dot--full {
-  width: 3rem;
-  height: 3rem;
+.dot-container {
   top: 1rem;
   left: 1rem;
-  background-color: white;
-  border-radius: 50%; }
+  display: flex;
+  align-items: center;
+  gap: 1rem; }
+  .dot-container__dot--full {
+    width: 3rem;
+    height: 3rem;
+    background-color: white;
+    border-radius: 50%; }
+  .dot-container__dot--empty {
+    width: 1.5rem;
+    height: 1.5rem;
+    background-color: transparent;
+    border: 1px solid white;
+    border-radius: 50%; }
 
-* {
+@im .card-container-back {}* {
   padding: 0;
   margin: 0;
   box-sizing: border-box; }
