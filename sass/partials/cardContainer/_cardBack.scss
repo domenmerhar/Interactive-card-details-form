@@ -1,6 +1,9 @@
 .card-container-back {
+  justify-self: flex-end;
   position: relative;
   display: inline-block;
+  align-self: flex-end;
+
   .card-container-back__back-img {
   }
 

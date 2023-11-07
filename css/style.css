@@ -44,8 +44,10 @@ body {
     border-radius: 50%; }
 
 .card-container-back {
+  justify-self: flex-end;
   position: relative;
-  display: inline-block; }
+  display: inline-block;
+  align-self: flex-end; }
   .card-container-back .card-container-back__CVC {
     color: white;
     position: absolute;
@@ -53,7 +55,27 @@ body {
     right: 3rem;
     font-size: 1.8rem; }
 
+.card-container {
+  display: flex;
+  flex-direction: column;
+  width: 530px; }
+
+.input-container {
+  width: 500px; }
+
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box; }
+
+body {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+
+main {
+  width: 1440px;
+  display: flex;
+  justify-content: space-between; }
