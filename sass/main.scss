@@ -1,8 +1,9 @@
 @import "partials/_variables";
 @import "partials/_typography";
 
-@import "partials/cardContainer/cardFront/_cardFront";
-@import "partials/cardContainer/cardFront/_dotContainer";
+@import "partials/cardContainer/cardFront/_cardFront",
+  "partials/cardContainer/cardFront/_cardBottom",
+  "partials/cardContainer/cardFront/_dotContainer";
 
 @import "partials/cardContainer/_cardBack";
 

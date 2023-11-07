@@ -1,0 +1,14 @@
+.card-bottom-container {
+  position: absolute;
+  bottom: 3rem;
+  left: 1rem;
+  display: flex;
+  justify-content: space-between;
+  width: 25.5rem;
+
+  &__owner-name {
+  }
+
+  &__expiration-date {
+  }
+}

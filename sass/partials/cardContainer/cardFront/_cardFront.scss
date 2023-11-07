@@ -1,18 +1,10 @@
 .card-container-front {
-  & > *:not(:nth-child(1)) {
-    position: absolute;
-  }
+  position: relative;
+  color: $white;
 
   &__front-img {
-    display: relative;
   }
 
   &__card-number {
-  }
-
-  &__owner-name {
-  }
-
-  &__expiration-date {
   }
 }
