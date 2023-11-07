@@ -1,7 +1,14 @@
 .card-container-back {
+  position: relative;
+  display: inline-block;
   .card-container-back__back-img {
   }
 
   .card-container-back__CVC {
+    color: $white;
+    position: absolute;
+    top: 6.5rem;
+    right: 3rem;
+    font-size: 1.8rem;
   }
 }
