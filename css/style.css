@@ -6,6 +6,10 @@ main {
 body {
   font-size: 1.6rem; }
 
+input {
+  font-family: "Hanken Grotesk", sans-serif;
+  font-size: 1rem; }
+
 .card-container-front {
   position: relative;
   color: white; }
@@ -60,8 +64,17 @@ body {
   flex-direction: column;
   width: 530px; }
 
-.input-container {
+.input-container__form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
   width: 500px; }
+  .input-container__form__input {
+    padding: 0.5rem 1rem; }
+    .input-container__form__input:focus {
+      outline: solid 1px #6448fe; }
+    .input-container__form__input:not(:placeholder-shown):invalid {
+      outline: solid 1px #ff5252; }
 
 * {
   padding: 0;
@@ -78,4 +91,4 @@ body {
 main {
   width: 1440px;
   display: flex;
-  justify-content: space-between; }
+  gap: 15rem; }

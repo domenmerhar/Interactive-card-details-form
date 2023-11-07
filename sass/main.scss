@@ -1,14 +1,15 @@
-@import "partials/_variables";
-@import "partials/_typography";
+@import "partials/variables";
+@import "partials/typography";
 
-@import "partials/cardContainer/cardFront/_cardFront",
-  "partials/cardContainer/cardFront/_cardBottom",
-  "partials/cardContainer/cardFront/_dotContainer";
+@import "partials/cardContainer/cardFront/cardFront",
+  "partials/cardContainer/cardFront/cardBottom",
+  "partials/cardContainer/cardFront/dotContainer";
 
-@import "partials/cardContainer/_cardBack";
+@import "partials/cardContainer/cardBack";
 @import "partials/cardContainer/cardContainer";
 
-@import "partials/inputContainer/inputContainer";
+@import "partials/inputContainer";
+
 * {
   padding: 0;
   margin: 0;
@@ -26,5 +27,5 @@ body {
 main {
   width: 1440px;
   display: flex;
-  justify-content: space-between;
+  gap: 15rem;
 }

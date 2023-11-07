@@ -50,59 +50,68 @@
 
       <section class="input-container">
         <form class="input-container__form">
-          <label for="name" class="input-container__form__name-label"
+          <label for="name" class="input-container__form__label"
             >Cardholder Name</label
           >
           <input
             id="name"
             type="text"
-            class="input-container__form__name"
+            class="input-container__form__input"
             placeholder="e.g. Jane Appleseed "
+            required
           />
+
+          <label
+            for="card-number"
+            class="input-container__form__card-number-label"
+            >Card Number</label
+          >
+          <input
+            id="card-number"
+            class="input-container__form__input"
+            type="tel"
+            inputmode="numeric"
+            pattern="[0-9\s]{13,19}"
+            autocomplete="cc-number"
+            maxlength="19"
+            placeholder="XXXX XXXX XXXX XXXX"
+            required
+          />
+
+          <label for="exp-date" class="input-container__form__label"
+            >Exp. Date (MM/YY)</label
+          >
+          <input
+            type="text"
+            id="exp-date"
+            class="input-container__form__input"
+            placeholder="MM"
+            input="numeric"
+            maxlength="2"
+            required
+          />
+          <input
+            type="text"
+            id="exp-date"
+            class="input-container__form__input"
+            placeholder="YY"
+            input="numeric"
+            maxlength="2"
+            required
+          />
+
+          <label for="cvc" class="input-container__form__label">CVC</label>
+          <input
+            type="text"
+            id="cvc"
+            class="input-container__form__input"
+            placeholder="e.g. 123"
+            input="numeric"
+            maxlength="3"
+            required
+          />
+          <button class="input-container__form__btn">Confirm</button>
         </form>
-
-        <label
-          for="card-number"
-          class="input-container__form__card-number-label"
-          >Card Number</label
-        >
-        <input
-          id="card-number"
-          class="input-container__form__card-number-input"
-          type="tel"
-          inputmode="numeric"
-          pattern="[0-9\s]{13,19}"
-          autocomplete="cc-number"
-          maxlength="19"
-          placeholder="xxxx xxxx xxxx xxxx"
-        />
-
-        <label for="exp-date" class="input-container__form__exp-date-label"
-          >Exp. Date (MM/YY)</label
-        >
-        <input
-          type="text"
-          id="exp-date"
-          class="input-container__form__exp-date--mm"
-          placeholder="MM"
-        />
-        <input
-          type="text"
-          id="exp-date"
-          class="input-container__form__exp-date--yy"
-          placeholder="YY"
-        />
-
-        <label for="cvc" class="input-container__form__cvc-label"
-          >Exp. Date (MM/YY)</label
-        >
-        <input
-          type="text"
-          id="cvc"
-          class="input-container__form__cbc-input"
-          placeholder="e.g. 123"
-        />
-        <button class="input-container__form__btn">Confirm</button>
       </section>
     </main>
   </body>
