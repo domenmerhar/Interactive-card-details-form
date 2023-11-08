@@ -72,17 +72,32 @@ button {
   display: flex;
   flex-direction: column;
   gap: 2rem;
-  width: 500px; }
-  .input-container__form div {
-    display: flex;
-    flex-direction: column; }
+  width: 450px; }
   .input-container__form__input {
-    padding: 0.5rem 1rem; }
+    padding: 0.5rem 1rem;
+    border-radius: 10px;
+    border: 2px solid #dedddf; }
     .input-container__form__input:focus {
       outline: solid 1px #6448fe; }
     .input-container__form__input:not(:placeholder-shown):invalid {
       outline: solid 1px #ff5252; }
-  .input-container__form__btn {
+    .input-container__form__input-date {
+      display: inline-block;
+      max-width: 22%; }
+    .input-container__form__input-cvc {
+      display: inline-block;
+      max-width: 70%; }
+  .input-container__form__flex-input-container {
+    display: flex;
+    justify-content: space-between; }
+  .input-container__form__label-container {
+    position: relative; }
+    .input-container__form__label-container label {
+      position: absolute;
+      text-transform: uppercase; }
+    .input-container__form__label-container label:last-child {
+      right: 12.2rem; }
+  .input-container__form .input-container__form__btn {
     padding: 0.5rem 0;
     background-color: #21092f;
     border-radius: 10px;
