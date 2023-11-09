@@ -126,7 +126,10 @@ body {
   height: 100vh;
   display: flex;
   justify-content: center;
-  align-items: center; }
+  align-items: center;
+  background-image: url("../images/bg-main-desktop.png");
+  background-repeat: no-repeat;
+  background-size: 32.1%; }
 
 main {
   width: 1300px;
