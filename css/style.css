@@ -31,6 +31,8 @@ button {
   display: flex;
   justify-content: space-between;
   width: 25.5rem; }
+  .card-bottom-container__owner-name {
+    text-transform: uppercase; }
 
 .dot-container {
   position: absolute;
