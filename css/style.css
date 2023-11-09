@@ -61,7 +61,7 @@ button {
   .card-container-back .card-container-back__CVC {
     color: white;
     position: absolute;
-    top: 6.5rem;
+    top: 6.3rem;
     right: 3rem;
     font-size: 1.8rem; }
 
@@ -106,11 +106,15 @@ button {
       text-transform: uppercase; }
     .input-container__form__label-container label:last-child {
       right: 12.2rem; }
-  .input-container__form .input-container__form__btn {
-    padding: 0.5rem 0;
+  .input-container__form__btn {
+    padding: 1rem 0;
     background-color: #21092f;
     border-radius: 10px;
     border: none; }
+    .input-container__form__btn:hover {
+      cursor: pointer; }
+    .input-container__form__btn:active {
+      background-color: #600594; }
 
 * {
   padding: 0;
@@ -125,6 +129,6 @@ body {
   align-items: center; }
 
 main {
-  width: 1440px;
+  width: 1300px;
   display: flex;
   gap: 15rem; }
