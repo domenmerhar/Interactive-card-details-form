@@ -11,6 +11,7 @@
       href="./images/favicon-32x32.png"
     />
     <link rel="stylesheet" href="css/style.css" />
+    <script defer src="script.js"></script>
 
     <title>Frontend Mentor | Interactive card details form</title>
   </head>
@@ -30,11 +31,20 @@
             <div class="dot-container__dot--empty"></div>
           </div>
 
-          <p class="card-container-front__card-number">0000 0000 0000 0000</p>
+          <p class="card-container-front__card-number" data-text="card-number">
+            0000 0000 0000 0000
+          </p>
 
           <div class="card-bottom-container">
-            <p class="card-bottom-container__owner-name">Jane Appleseed</p>
-            <p class="card-bottom-container__expiration-date">00/00</p>
+            <p class="card-bottom-container__owner-name" data-text="name">
+              Jane Appleseed
+            </p>
+            <p
+              class="card-bottom-container__expiration-date"
+              data-text="card-number"
+            >
+              00/00
+            </p>
           </div>
         </section>
 
@@ -44,7 +54,7 @@
             alt="Back side of the credit card"
             class="card-container-back__back-img"
           />
-          <p class="card-container-back__CVC">000</p>
+          <p class="card-container-back__CVC" data-text="CVC">000</p>
         </section>
       </section>
 
@@ -60,6 +70,7 @@
               class="input-container__form__input input-container__form__input--big"
               placeholder="e.g. Jane Appleseed "
               required
+              data-input="name"
             />
           </div>
 
@@ -77,6 +88,7 @@
               maxlength="19"
               placeholder="XXXX XXXX XXXX XXXX"
               required
+              data-input="card-number"
             />
           </div>
 
@@ -96,6 +108,7 @@
               required
               max="12"
               min="1"
+              data-input="exp-date-month"
             />
             <input
               type="number"
@@ -107,6 +120,7 @@
               required
               max="99"
               min="0"
+              data-input="exp-date-year"
             />
 
             <input
@@ -117,6 +131,7 @@
               input="numeric"
               maxlength="3"
               required
+              data-input="cvc"
             />
           </div>
           <button class="input-container__form__btn">Confirm</button>
