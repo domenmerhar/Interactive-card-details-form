@@ -12,6 +12,10 @@ const trackedFields = [
     document.querySelector('[data-input="exp-date-month"]'),
   ],
   [
+    document.querySelector('[data-text="exp-date-year"]'),
+    document.querySelector('[data-input="exp-date-year"]'),
+  ],
+  [
     document.querySelector('[data-text="CVC"]'),
     document.querySelector('[data-input="CVC"]'),
   ],
@@ -37,7 +41,7 @@ const trackInput = (input, element) => {
       element,
       input.dataset.input === "card-number"
         ? formatCardNumber(element, e.target.value)
-        : input
+        : e.target.value
     )
   })
 }
