@@ -33,6 +33,8 @@ const formatCardNumber = (text) =>
 
 const formatDate = (text) => (text.length < 2 ? text.padStart(2, "0") : text)
 
+const formatCVC = (text) => (text.length < 3 ? text.padStart(3, "0") : text)
+
 const format = (text, input) => {
   switch (input.dataset.input) {
     case "card-number":
@@ -41,6 +43,8 @@ const format = (text, input) => {
       return formatDate(text)
     case "exp-date-year":
       return formatDate(text)
+    case "CVC":
+      return formatCVC(text)
     default:
       return text
   }
