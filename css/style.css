@@ -68,7 +68,8 @@ button {
 .card-container {
   display: flex;
   flex-direction: column;
-  width: 530px; }
+  width: 530px;
+  gap: 30px; }
 
 .input-container__form {
   display: flex;
