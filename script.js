@@ -19,15 +19,13 @@ const trackedFields = [
 
 const CVCInput = document.querySelector('[data-input="CVC"]')
 
-const formatCardNumber = (element, text) => {
-  if (text.length < 4 || text.length > 16) return text
-
-  let splitText = text.split("")
-
-  return splitText
-    .map((char, index) => (index % 4 == 0 ? " " + char : char))
-    .join("")
-}
+const formatCardNumber = (element, text) =>
+  text.length < 4 || text.length > 16
+    ? text
+    : text
+        .split("")
+        .map((char, index) => (index % 4 == 0 ? " " + char : char))
+        .join("")
 
 const changeTextContent = (element, value) => {
   element.textContent = value
@@ -35,7 +33,12 @@ const changeTextContent = (element, value) => {
 
 const trackInput = (input, element) => {
   input.addEventListener("input", (e) => {
-    changeTextContent(element, formatCardNumber(element, e.target.value))
+    changeTextContent(
+      element,
+      input.dataset.input === "card-number"
+        ? formatCardNumber(element, e.target.value)
+        : input
+    )
   })
 }
 
