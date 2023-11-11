@@ -1,23 +1,28 @@
 const trackedFields = [
   [
-    document.querySelector('[data-text="card-number"]'),
-    document.querySelector('[data-input="card-number"]'),
-  ],
-  [
     document.querySelector('[data-text="name"]'),
     document.querySelector('[data-input="name"]'),
+    document.querySelector('[data-error="name"]'),
+  ],
+  [
+    document.querySelector('[data-text="card-number"]'),
+    document.querySelector('[data-input="card-number"]'),
+    document.querySelector('[data-error="card-number"]'),
   ],
   [
     document.querySelector('[data-text="exp-date-month"]'),
     document.querySelector('[data-input="exp-date-month"]'),
+    document.querySelector('[data-error="date"]'),
   ],
   [
     document.querySelector('[data-text="exp-date-year"]'),
     document.querySelector('[data-input="exp-date-year"]'),
+    document.querySelector('[data-error="date"]'),
   ],
   [
     document.querySelector('[data-text="CVC"]'),
     document.querySelector('[data-input="CVC"]'),
+    document.querySelector('[data-error="cvc"]'),
   ],
 ]
 
@@ -54,21 +59,34 @@ const changeTextContent = (element, value) => {
   element.textContent = value
 }
 
-const trackInput = (input, element) => {
+const validate = (input, error) => {
+  if (input.validationMessage !== "") {
+    error.textContent = input.validationMessage
+    return error.classList.add("error-message--shown")
+  }
+
+  if (error.classList.contains) {
+    error.classList.remove("error-message--shown")
+  }
+}
+
+const trackInput = (input, element, error) => {
   input.addEventListener("input", (e) => {
     changeTextContent(element, format(e.target.value, input))
+    validate(input, error)
   })
 }
 
 const init = () => {
   trackedFields.forEach(([element, input]) => {
     if (input.value === "") return
+
     changeTextContent(element, format(input.value, input))
   })
 }
 
 init()
 
-trackedFields.forEach(([element, input]) => trackInput(input, element))
-
-form.addEventListener("submit", (e) => {})
+trackedFields.forEach(([element, input, error]) =>
+  trackInput(input, element, error)
+)
