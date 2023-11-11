@@ -111,9 +111,10 @@ const changeTextContent = (element, value) => {
 const validateCreditCard = (input) => {
   if (input.value.length !== input.maxLength) return
 
-  if (!isCreditCardValid(input.value)) {
-    input.setCustomValidity("Credit card number does not exist")
-  }
+  if (!isCreditCardValid(input.value))
+    return input.setCustomValidity("Credit card number does not exist")
+
+  input.setCustomValidity("")
 }
 
 const validate = (input, error) => {
