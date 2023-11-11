@@ -72,10 +72,11 @@ const validate = (input, error) => {
 
 const trackInput = (input, element, error) => {
   input.addEventListener("input", (e) => {
+    validate(input, error)
+
     if (input.value === "") return (element.textContent = input.placeholder)
 
     changeTextContent(element, format(e.target.value, input))
-    validate(input, error)
   })
 }
 

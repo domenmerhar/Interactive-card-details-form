@@ -2,7 +2,7 @@
   &__form {
     display: flex;
     flex-direction: column;
-    gap: 2rem;
+    gap: 1.4rem;
     width: 450px;
 
     & > input {
@@ -49,6 +49,7 @@
 
     &__label-container {
       position: relative;
+      padding: 1rem 0;
 
       & label {
         position: absolute;
