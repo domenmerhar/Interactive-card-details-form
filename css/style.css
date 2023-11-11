@@ -112,11 +112,23 @@ button {
     padding: 1rem 0;
     background-color: #21092f;
     border-radius: 10px;
-    border: none; }
+    border: none;
+    width: 100%; }
     .input-container__form__btn:hover {
       cursor: pointer; }
     .input-container__form__btn:active {
       background-color: #600594; }
+  .input-container__form__heading {
+    font-size: 2rem;
+    margin-bottom: 0;
+    text-align: center; }
+  .input-container__form__paragraph {
+    color: #8e8593;
+    text-align: center; }
+
+.input-container__img {
+  height: 5rem;
+  width: 5rem; }
 
 .error-message {
   opacity: 0;
@@ -134,6 +146,15 @@ button {
 .error-message--shown {
   opacity: 1;
   transform: translateY(20%); }
+
+.align-items--center {
+  align-items: center; }
+
+.justify-content--center {
+  justify-content: center; }
+
+.display-flex {
+  display: flex; }
 
 * {
   padding: 0;

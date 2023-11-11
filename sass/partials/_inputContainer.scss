@@ -66,6 +66,7 @@
       background-color: $very-dark-violet;
       border-radius: 10px;
       border: none;
+      width: 100%;
 
       &:hover {
         cursor: pointer;
@@ -75,5 +76,21 @@
         background-color: $linear-gradient-active-input-border-end;
       }
     }
+
+    &__heading {
+      font-size: 2rem;
+      margin-bottom: 0;
+      text-align: center;
+    }
+
+    &__paragraph {
+      color: $dark-grayish-violet;
+      text-align: center;
+    }
+  }
+
+  &__img {
+    height: $checkmark-size;
+    width: $checkmark-size;
   }
 }
