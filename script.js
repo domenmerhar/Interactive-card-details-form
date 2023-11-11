@@ -21,7 +21,7 @@ const trackedFields = [
   ],
 ]
 
-const CVCInput = document.querySelector('[data-input="CVC"]')
+const form = document.querySelector('[data-input="form"]')
 
 const formatCardNumber = (text) =>
   text.length < 4 || text.length > 16
@@ -70,3 +70,5 @@ const init = () => {
 init()
 
 trackedFields.forEach(([element, input]) => trackInput(input, element))
+
+form.addEventListener("submit", (e) => {})

@@ -62,7 +62,7 @@
       </section>
 
       <section class="input-container">
-        <form class="input-container__form">
+        <form class="input-container__form" data-input="form">
           <div>
             <label for="name" class="input-container__form__label"
               >Cardholder Name</label
@@ -76,6 +76,8 @@
               data-input="name"
             />
           </div>
+
+          <p class="error-message" data-error="card-number">Test</p>
 
           <div>
             <label for="card-number" class="input-container__form__label"
@@ -94,49 +96,56 @@
               data-input="card-number"
             />
           </div>
+          <p class="error-message" data-error="card-number">Test</p>
 
           <div class="input-container__form__label-container">
             <label for="exp-date" class="">Exp. Date (MM/YY)</label>
             <label for="cvc" class="">CVC</label>
           </div>
 
-          <div class="input-container__form__flex-input-container">
-            <input
-              type="number"
-              id="exp-date"
-              class="input-container__form__input input-container__form__input-date"
-              placeholder="MM"
-              input="numeric"
-              maxlength="2"
-              required
-              max="12"
-              min="1"
-              data-input="exp-date-month"
-            />
-            <input
-              type="number"
-              id="exp-date"
-              class="input-container__form__input input-container__form__input-date"
-              placeholder="YY"
-              input="numeric"
-              maxlength="2"
-              required
-              max="99"
-              min="0"
-              data-input="exp-date-year"
-            />
+          <div>
+            <div class="input-container__form__flex-input-container">
+              <input
+                type="number"
+                id="exp-date"
+                class="input-container__form__input input-container__form__input-date"
+                placeholder="MM"
+                input="numeric"
+                maxlength="2"
+                required
+                max="13"
+                min="1"
+                data-input="exp-date-month"
+              />
+              <input
+                type="number"
+                id="exp-date"
+                class="input-container__form__input input-container__form__input-date"
+                placeholder="YY"
+                input="numeric"
+                maxlength="2"
+                required
+                max="99"
+                min="0"
+                data-input="exp-date-year"
+              />
 
-            <input
-              type="number"
-              id="cvc"
-              class="input-container__form__input input-container__form__input-cvc"
-              placeholder="e.g. 123"
-              input="numeric"
-              max="999"
-              min="001"
-              required
-              data-input="CVC"
-            />
+              <input
+                type="number"
+                id="cvc"
+                class="input-container__form__input input-container__form__input-cvc"
+                placeholder="e.g. 123"
+                input="numeric"
+                max="999"
+                min="001"
+                required
+                data-input="CVC"
+              />
+            </div>
+            <div class="input-container__form__card_errors">
+              <p class="error-message" data-error="date">Test</p>
+              <p class="error-message" data-error="cvc">Test</p>
+            </div>
           </div>
           <button class="input-container__form__btn">Confirm</button>
         </form>
