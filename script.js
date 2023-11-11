@@ -26,7 +26,24 @@ const trackedFields = [
   ],
 ]
 
+const successMessageHTML = `
+    <img
+    class="input-container__img"
+    src="images/icon-complete.svg"
+    alt="checkmark"
+  />
+  <div>
+    <h1 class="input-container__form__heading">Thank you!</h1>
+    <p class="input-container__form__paragraph">
+      We've added your card details
+    </p>
+  </div>
+
+  <button class="input-container__form__btn">Confirm</button>
+  `
+
 const form = document.querySelector('[data-input="form"]')
+const inputContainer = document.querySelector('[data-input="container"]')
 
 function isCreditCardValid(cardNumber) {
   // Remove any spaces or non-numeric characters
@@ -135,3 +152,12 @@ init()
 trackedFields.forEach(([element, input, error]) =>
   trackInput(input, element, error)
 )
+
+form.addEventListener("submit", (e) => {
+  e.preventDefault()
+  inputContainer.classList.add("display-flex")
+  inputContainer.classList.add("align-items--center")
+  form.classList.add("align-items--center")
+
+  form.innerHTML = successMessageHTML
+})

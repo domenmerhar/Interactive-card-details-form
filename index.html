@@ -61,12 +61,9 @@
         </section>
       </section>
 
-      <section class="input-container display-flex align-items--center">
-        <form
-          class="input-container__form align-items--center"
-          data-input="form"
-        >
-          <!-- <div>
+      <section class="input-container" data-input="container">
+        <form class="input-container__form" data-input="form">
+          <div>
             <label for="name" class="input-container__form__label"
               >Cardholder Name</label
             >
@@ -148,22 +145,35 @@
               <p class="error-message" data-error="date">Test</p>
               <p class="error-message" data-error="cvc">Test</p>
             </div>
-          </div> -->
-
-          <img
-            class="input-container__img"
-            src="images/icon-complete.svg"
-            alt="checkmark"
-          />
-          <div>
-            <h1 class="input-container__form__heading">Thank you!</h1>
-            <p class="input-container__form__paragraph">
-              We've added your card details
-            </p>
           </div>
+
           <button class="input-container__form__btn">Confirm</button>
         </form>
       </section>
     </main>
   </body>
 </html>
+
+<!--
+  <img
+    class="input-container__img"
+    src="images/icon-complete.svg"
+    alt="checkmark"
+  />
+  <div>
+    <h1 class="input-container__form__heading">Thank you!</h1>
+    <p class="input-container__form__paragraph">
+      We've added your card details
+    </p>
+  </div>
+
+  <button class="input-container__form__btn">Confirm</button>
+
+
+
+  <section class="input-container display-flex align-items--center">
+        <form
+          class="input-container__form align-items--center"
+          data-input="form"
+        >
+-->
