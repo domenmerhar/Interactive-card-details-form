@@ -28,6 +28,38 @@ const trackedFields = [
 
 const form = document.querySelector('[data-input="form"]')
 
+function isCreditCardValid(cardNumber) {
+  // Remove any spaces or non-numeric characters
+  const cleanedCardNumber = cardNumber.replace(/\D/g, "")
+
+  // Convert the card number to an array of digits
+  const digits = cleanedCardNumber.split("").map(Number)
+
+  // Reverse the array to start from the rightmost digit
+  digits.reverse()
+
+  // Apply the Luhn algorithm
+  let sum = 0
+  for (let i = 0; i < digits.length; i++) {
+    let digit = digits[i]
+
+    if (i % 2 === 1) {
+      // Double every second digit
+      digit *= 2
+
+      // If the result is greater than 9, subtract 9
+      if (digit > 9) {
+        digit -= 9
+      }
+    }
+
+    sum += digit
+  }
+
+  // Check if the sum is a multiple of 10
+  return sum % 10 === 0
+}
+
 const formatCardNumber = (text) =>
   text.length < 4 || text.length > 16
     ? text
@@ -59,7 +91,17 @@ const changeTextContent = (element, value) => {
   element.textContent = value
 }
 
+const validateCreditCard = (input) => {
+  if (input.value.length !== input.maxLength) return
+
+  if (!isCreditCardValid(input.value)) {
+    input.setCustomValidity("Credit card number does not exist")
+  }
+}
+
 const validate = (input, error) => {
+  if (input.dataset.input === "card-number") validateCreditCard(input)
+
   if (input.validationMessage !== "") {
     error.textContent = input.validationMessage
     return error.classList.add("error-message--shown")
