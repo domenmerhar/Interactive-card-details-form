@@ -60,4 +60,13 @@ const trackInput = (input, element) => {
   })
 }
 
+const init = () => {
+  trackedFields.forEach(([element, input]) => {
+    if (input.value === "") return
+    changeTextContent(element, format(input.value, input))
+  })
+}
+
+init()
+
 trackedFields.forEach(([element, input]) => trackInput(input, element))
