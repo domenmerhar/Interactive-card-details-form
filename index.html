@@ -57,7 +57,7 @@
             alt="Back side of the credit card"
             class="card-container-back__back-img"
           />
-          <p class="card-container-back__cvc" data-text="cvc">000</p>
+          <p class="card-container-back__CVC" data-text="CVC">000</p>
         </section>
       </section>
 
@@ -75,12 +75,6 @@
               required
               data-input="name"
             />
-            <p
-              class="input-container__form__name-error error-message"
-              data-error="name"
-            >
-              Test
-            </p>
           </div>
 
           <div>
@@ -99,12 +93,6 @@
               required
               data-input="card-number"
             />
-            <p
-              class="input-container__form__card-number-error error-message"
-              data-error="card-number"
-            >
-              Test
-            </p>
           </div>
 
           <div class="input-container__form__label-container">
@@ -112,59 +100,43 @@
             <label for="cvc" class="">CVC</label>
           </div>
 
-          <div>
-            <div class="input-container__form__flex-input-container">
-              <input
-                type="number"
-                id="exp-date"
-                class="input-container__form__input input-container__form__input-date"
-                placeholder="MM"
-                input="numeric"
-                maxlength="2"
-                required
-                max="12"
-                min="1"
-                data-input="exp-date-month"
-              />
-              <input
-                type="number"
-                id="exp-date"
-                class="input-container__form__input input-container__form__input-date"
-                placeholder="YY"
-                input="numeric"
-                maxlength="2"
-                required
-                max="99"
-                min="0"
-                data-input="exp-date-year"
-              />
+          <div class="input-container__form__flex-input-container">
+            <input
+              type="number"
+              id="exp-date"
+              class="input-container__form__input input-container__form__input-date"
+              placeholder="MM"
+              input="numeric"
+              maxlength="2"
+              required
+              max="12"
+              min="1"
+              data-input="exp-date-month"
+            />
+            <input
+              type="number"
+              id="exp-date"
+              class="input-container__form__input input-container__form__input-date"
+              placeholder="YY"
+              input="numeric"
+              maxlength="2"
+              required
+              max="99"
+              min="0"
+              data-input="exp-date-year"
+            />
 
-              <input
-                type="number"
-                id="cvc"
-                class="input-container__form__input input-container__form__input-cvc"
-                placeholder="e.g. 123"
-                input="numeric"
-                max="999"
-                min="001"
-                required
-                data-input="cvc"
-              />
-            </div>
-            <div class="input-container__form__card_errors">
-              <p
-                class="input-container__form__card-date-error error-message"
-                data-error="date"
-              >
-                Test
-              </p>
-              <p
-                class="input-container__form__card-cvc-error error-message"
-                data-error="cvc"
-              >
-                Test
-              </p>
-            </div>
+            <input
+              type="number"
+              id="cvc"
+              class="input-container__form__input input-container__form__input-cvc"
+              placeholder="e.g. 123"
+              input="numeric"
+              max="999"
+              min="001"
+              required
+              data-input="CVC"
+            />
           </div>
           <button class="input-container__form__btn">Confirm</button>
         </form>
