@@ -16,8 +16,8 @@ const trackedFields = [
     document.querySelector('[data-input="exp-date-year"]'),
   ],
   [
-    document.querySelector('[data-text="CVC"]'),
-    document.querySelector('[data-input="CVC"]'),
+    document.querySelector('[data-text="cvc"]'),
+    document.querySelector('[data-input="cvc"]'),
   ],
 ]
 

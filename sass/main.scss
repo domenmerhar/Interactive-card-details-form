@@ -9,6 +9,7 @@
 @import "partials/cardContainer/cardContainer";
 
 @import "partials/inputContainer";
+@import "partials/inputError";
 
 * {
   padding: 0;
@@ -29,7 +30,7 @@ body {
 }
 
 main {
-  width: 1300px;
+  max-width: 1300px;
   display: flex;
   gap: 15rem;
 }
