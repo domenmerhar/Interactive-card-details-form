@@ -1,9 +1,26 @@
 .input-container {
+  @include phone {
+    margin-top: $phone-card-margin-top;
+  }
+
   &__form {
     display: flex;
     flex-direction: column;
     gap: 1.4rem;
     width: 450px;
+
+    @include phone {
+      gap: 0.5rem;
+
+      & > div:first-child,
+      & > div:nth-child(2) {
+        height: 90px;
+      }
+
+      input {
+        height: 50px;
+      }
+    }
 
     & > input {
       width: 100%;
@@ -51,6 +68,10 @@
       position: relative;
       padding: 1rem 0;
 
+      @include phone {
+        margin-bottom: 20px;
+      }
+
       & label {
         position: absolute;
         text-transform: uppercase;
@@ -92,9 +113,5 @@
   &__img {
     height: $checkmark-size;
     width: $checkmark-size;
-  }
-
-  @include phone {
-    margin-top: $phone-card-margin-top;
   }
 }
