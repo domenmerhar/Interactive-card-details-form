@@ -46,7 +46,7 @@ main {
   @include phone {
     width: 100%;
     flex-direction: column;
-    gap: 0;
+    gap: 1.5rem;
     justify-content: space-around;
     height: 95%;
     align-items: center;

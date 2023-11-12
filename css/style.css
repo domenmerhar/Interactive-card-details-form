@@ -184,14 +184,27 @@ label {
   .input-container__form__heading {
     font-size: 2rem;
     margin-bottom: 0;
-    text-align: center; }
+    text-align: center;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    margin-bottom: 0.3rem; }
   .input-container__form__paragraph {
     color: #8e8593;
-    text-align: center; }
+    text-align: center;
+    letter-spacing: 1px; }
+    @media (max-width: 48em) {
+      .input-container__form__paragraph {
+        font-size: 1.1rem;
+        letter-spacing: 2px; } }
 
 .input-container__img {
   height: 5rem;
   width: 5rem; }
+  @media (max-width: 48em) {
+    .input-container__img {
+      height: 120px;
+      width: 120px;
+      margin-bottom: 1rem; } }
 
 .error-message {
   opacity: 0;
@@ -246,7 +259,7 @@ main {
     main {
       width: 100%;
       flex-direction: column;
-      gap: 0;
+      gap: 1.5rem;
       justify-content: space-around;
       height: 95%;
       align-items: center; } }
