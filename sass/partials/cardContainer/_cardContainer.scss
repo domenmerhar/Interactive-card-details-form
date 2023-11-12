@@ -3,4 +3,10 @@
   flex-direction: column;
   width: 530px;
   gap: 30px;
+
+  @include phone {
+    flex-direction: column-reverse;
+    width: 100%;
+    gap: 0px;
+  }
 }

@@ -17,11 +17,19 @@ button {
 .card-container-front {
   position: relative;
   color: white; }
+  .card-container-front__front-img {
+    width: 400px; }
   .card-container-front__card-number {
     position: absolute;
     bottom: 31%;
     left: 4%;
     font-size: 2rem; }
+    @media (max-width: 48em) {
+      .card-container-front__card-number {
+        font-size: 1.8rem; } }
+  @media (max-width: 48em) {
+    .card-container-front {
+      width: 75%; } }
 
 .card-bottom-container {
   font-weight: 500;
@@ -33,6 +41,10 @@ button {
   width: 75%; }
   .card-bottom-container__owner-name {
     text-transform: uppercase; }
+  @media (max-width: 48em) {
+    .card-bottom-container {
+      width: 90%;
+      font-size: 1rem; } }
 
 .dot-container {
   position: absolute;
@@ -58,18 +70,29 @@ button {
   position: relative;
   display: inline-block;
   align-self: flex-end; }
+  @media (max-width: 48em) {
+    .card-container-back .card-container-back__back-img {
+      width: 400px; } }
   .card-container-back .card-container-back__CVC {
     color: white;
     position: absolute;
     top: 40.5%;
     right: 10.5%;
     font-size: 1.8rem; }
+    @media (max-width: 48em) {
+      .card-container-back .card-container-back__CVC {
+        font-size: 1.6rem; } }
 
 .card-container {
   display: flex;
   flex-direction: column;
   width: 530px;
   gap: 30px; }
+  @media (max-width: 48em) {
+    .card-container {
+      flex-direction: column-reverse;
+      width: 100%;
+      gap: 0px; } }
 
 .input-container__form {
   display: flex;
@@ -170,8 +193,19 @@ body {
   background-image: url("../images/bg-main-desktop.png");
   background-repeat: no-repeat;
   background-size: 32.1%; }
+  @media (max-width: 48em) {
+    body {
+      background-image: url("../images/bg-main-mobile.png");
+      background-size: 100%; } }
 
 main {
   width: 1300px;
   display: flex;
   gap: 15rem; }
+  @media (max-width: 48em) {
+    main {
+      width: 100%;
+      flex-direction: column;
+      gap: 0;
+      justify-content: space-around;
+      height: 100%; } }

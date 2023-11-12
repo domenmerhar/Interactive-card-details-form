@@ -13,4 +13,9 @@
 
   &__expiration-date {
   }
+
+  @include phone {
+    width: 90%;
+    font-size: 1rem;
+  }
 }

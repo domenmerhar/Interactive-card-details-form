@@ -1,6 +1,7 @@
 @import "partials/variables";
 @import "partials/typography";
 @import "media";
+
 @import "partials/cardContainer/cardFront/cardFront",
   "partials/cardContainer/cardFront/cardBottom",
   "partials/cardContainer/cardFront/dotContainer";
@@ -29,10 +30,23 @@ body {
   background-image: url("../images/bg-main-desktop.png");
   background-repeat: no-repeat;
   background-size: 32.1%;
+
+  @include phone {
+    background-image: url("../images/bg-main-mobile.png");
+    background-size: 100%;
+  }
 }
 
 main {
   width: 1300px;
   display: flex;
   gap: 15rem;
+
+  @include phone {
+    width: 100%;
+    flex-direction: column;
+    gap: 0;
+    justify-content: space-around;
+    height: 100%;
+  }
 }

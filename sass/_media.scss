@@ -1,5 +1,5 @@
 @mixin phone {
-  @media (max-width: 24em) {
+  @media (max-width: 48em) {
     @content;
   }
 }

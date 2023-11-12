@@ -3,6 +3,7 @@
   color: $white;
 
   &__front-img {
+    width: 400px;
   }
 
   &__card-number {
@@ -10,5 +11,13 @@
     bottom: 31%;
     left: $card-left;
     font-size: 2rem;
+
+    @include phone {
+      font-size: 1.8rem;
+    }
+  }
+
+  @include phone {
+    width: 75%;
   }
 }

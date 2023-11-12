@@ -5,6 +5,9 @@
   align-self: flex-end;
 
   .card-container-back__back-img {
+    @include phone {
+      width: 400px;
+    }
   }
 
   .card-container-back__CVC {
@@ -13,5 +16,9 @@
     top: 40.5%;
     right: 10.5%;
     font-size: 1.8rem;
+
+    @include phone {
+      font-size: 1.6rem;
+    }
   }
 }
