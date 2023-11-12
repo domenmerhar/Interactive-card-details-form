@@ -2,10 +2,6 @@
   position: relative;
   color: $white;
 
-  &__front-img {
-    width: 400px;
-  }
-
   &__card-number {
     position: absolute;
     bottom: 31%;
@@ -22,5 +18,9 @@
     width: 90%;
     margin-top: $phone-card-margin-top;
     z-index: 100;
+
+    &__front-img {
+      width: 400px;
+    }
   }
 }

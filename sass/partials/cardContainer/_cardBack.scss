@@ -4,13 +4,13 @@
   display: inline-block;
   align-self: flex-end;
 
-  .card-container-back__back-img {
+  &__back-img {
     @include phone {
       width: 400px;
     }
   }
 
-  .card-container-back__CVC {
+  &__CVC {
     color: $white;
     position: absolute;
     top: 40.5%;

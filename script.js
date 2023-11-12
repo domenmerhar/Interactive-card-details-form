@@ -45,6 +45,8 @@ const successMessageHTML = `
 const form = document.querySelector('[data-input="form"]')
 const inputContainer = document.querySelector('[data-input="container"]')
 
+let isMobile
+
 function isCreditCardValid(cardNumber) {
   // Remove any spaces or non-numeric characters
   const cleanedCardNumber = cardNumber.replace(/\D/g, "")
@@ -111,13 +113,14 @@ const changeTextContent = (element, value) => {
 const validateCreditCard = (input) => {
   if (input.value.length !== input.maxLength) return
 
-  if (!isCreditCardValid(input.value))
+  if (!isCreditCardValid(input.value)) {
+    error.classList.add("error-message--shown")
     return input.setCustomValidity("Credit card number does not exist")
-
-  input.setCustomValidity("")
+  }
 }
 
 const validate = (input, error) => {
+  if (input.validationMessage === "") return
   if (input.dataset.input === "card-number") validateCreditCard(input)
 
   if (input.validationMessage !== "") {
@@ -125,14 +128,13 @@ const validate = (input, error) => {
     return error.classList.add("error-message--shown")
   }
 
-  if (error.classList.contains) {
-    error.classList.remove("error-message--shown")
-  }
+  //If no error message, remove error message
+  if (error.classList.contains) error.classList.remove("error-message--shown")
 }
 
 const trackInput = (input, element, error) => {
   input.addEventListener("input", (e) => {
-    validate(input, error)
+    if (!isMobile) validate(input, error)
 
     if (input.value === "") return (element.textContent = input.placeholder)
 
@@ -141,6 +143,8 @@ const trackInput = (input, element, error) => {
 }
 
 const init = () => {
+  isMobile = window.matchMedia("screen and (max-width: 48em)").matches
+
   trackedFields.forEach(([element, input]) => {
     if (input.value === "") return
 
@@ -161,4 +165,8 @@ form.addEventListener("submit", (e) => {
   form.classList.add("align-items--center")
 
   form.innerHTML = successMessageHTML
+})
+
+window.addEventListener("resize", () => {
+  isMobile = window.matchMedia("screen and (max-width: 48em)").matches
 })

@@ -28,22 +28,22 @@ label {
 .card-container-front {
   position: relative;
   color: white; }
-  .card-container-front__front-img {
-    width: 400px; }
   .card-container-front__card-number {
     position: absolute;
     bottom: 31%;
     left: 4%;
     font-size: 2rem;
     letter-spacing: 1px; }
-    @media (max-width: 48em) {
+    @media screen and (max-width: 48em) {
       .card-container-front__card-number {
         font-size: 1.8rem; } }
-  @media (max-width: 48em) {
+  @media screen and (max-width: 48em) {
     .card-container-front {
       width: 90%;
       margin-top: -80px;
-      z-index: 100; } }
+      z-index: 100; }
+      .card-container-front__front-img {
+        width: 400px; } }
 
 .card-bottom-container {
   font-weight: 500;
@@ -58,9 +58,9 @@ label {
     letter-spacing: 1px; }
   .card-bottom-container__expiration-date {
     letter-spacing: 1px; }
-  @media (max-width: 48em) {
+  @media screen and (max-width: 48em) {
     .card-bottom-container {
-      width: 90%;
+      width: 360px;
       font-size: 1rem; } }
 
 .dot-container {
@@ -87,18 +87,18 @@ label {
   position: relative;
   display: inline-block;
   align-self: flex-end; }
-  @media (max-width: 48em) {
-    .card-container-back .card-container-back__back-img {
+  @media screen and (max-width: 48em) {
+    .card-container-back__back-img {
       width: 400px; } }
-  .card-container-back .card-container-back__CVC {
+  .card-container-back__CVC {
     color: white;
     position: absolute;
     top: 40.5%;
     right: 10.5%;
     font-size: 1.8rem;
     letter-spacing: 1px; }
-    @media (max-width: 48em) {
-      .card-container-back .card-container-back__CVC {
+    @media screen and (max-width: 48em) {
+      .card-container-back__CVC {
         font-size: 1.4rem;
         top: 41.5%; } }
 
@@ -107,19 +107,19 @@ label {
   flex-direction: column;
   width: 530px;
   gap: 30px; }
-  @media (max-width: 48em) {
+  @media screen and (max-width: 48em) {
     .card-container {
       flex-direction: column-reverse;
       width: 85%;
       gap: 0px; } }
 
-@media (max-width: 48em) {
+@media screen and (max-width: 48em) {
   .error-message,
   .input-container__form__card_errors {
     display: none;
     visibility: hidden; } }
 
-@media (max-width: 48em) {
+@media screen and (max-width: 48em) {
   .input-container {
     margin-top: -80px; } }
 
@@ -128,7 +128,7 @@ label {
   flex-direction: column;
   gap: 1.4rem;
   width: 450px; }
-  @media (max-width: 48em) {
+  @media screen and (max-width: 48em) {
     .input-container__form {
       gap: 0.5rem; }
       .input-container__form > div:first-child,
@@ -163,7 +163,7 @@ label {
   .input-container__form__label-container {
     position: relative;
     padding: 1rem 0; }
-    @media (max-width: 48em) {
+    @media screen and (max-width: 48em) {
       .input-container__form__label-container {
         margin-bottom: 20px; } }
     .input-container__form__label-container label {
@@ -192,7 +192,7 @@ label {
     color: #8e8593;
     text-align: center;
     letter-spacing: 1px; }
-    @media (max-width: 48em) {
+    @media screen and (max-width: 48em) {
       .input-container__form__paragraph {
         font-size: 1.1rem;
         letter-spacing: 2px; } }
@@ -200,7 +200,7 @@ label {
 .input-container__img {
   height: 5rem;
   width: 5rem; }
-  @media (max-width: 48em) {
+  @media screen and (max-width: 48em) {
     .input-container__img {
       height: 120px;
       width: 120px;
@@ -246,7 +246,7 @@ body {
   background-image: url("../images/bg-main-desktop.png");
   background-repeat: no-repeat;
   background-size: 32.1%; }
-  @media (max-width: 48em) {
+  @media screen and (max-width: 48em) {
     body {
       background-image: url("../images/bg-main-mobile.png");
       background-size: 100%; } }
@@ -255,7 +255,7 @@ main {
   width: 1300px;
   display: flex;
   gap: 15rem; }
-  @media (max-width: 48em) {
+  @media screen and (max-width: 48em) {
     main {
       width: 100%;
       flex-direction: column;
