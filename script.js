@@ -110,26 +110,27 @@ const changeTextContent = (element, value) => {
   element.textContent = value
 }
 
-const validateCreditCard = (input) => {
+const validateCreditCard = (input, error) => {
   if (input.value.length !== input.maxLength) return
 
   if (!isCreditCardValid(input.value)) {
     if (!isMobile) error.classList.add("error-message--shown")
+    console.log("invalid")
     return input.setCustomValidity("Credit card number does not exist")
   }
 }
 
 const validate = (input, error) => {
-  if (input.dataset.input === "card-number") validateCreditCard(input)
+  if (input.dataset.input === "card-number") validateCreditCard(input, error)
   if (isMobile) return
+
+  if (error.classList.contains("error-message--shown"))
+    error.classList.remove("error-message--shown")
 
   if (input.validationMessage !== "") {
     error.textContent = input.validationMessage
     error.classList.add("error-message--shown")
   }
-
-  //If no error message, remove error message
-  if (error.classList.contains) error.classList.remove("error-message--shown")
 }
 
 const trackInput = (input, element, error) => {
