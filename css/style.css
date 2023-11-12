@@ -9,10 +9,17 @@ body {
 input {
   font-family: "Hanken Grotesk", sans-serif;
   font-size: 1rem; }
+  input::placeholder {
+    letter-spacing: 1px;
+    font-weight: 500; }
 
 button {
   font-size: 1.2em;
   color: white; }
+
+label {
+  letter-spacing: 1px;
+  font-weight: 500; }
 
 .card-container-front {
   position: relative;
@@ -31,7 +38,7 @@ button {
   @media (max-width: 48em) {
     .card-container-front {
       width: 90%;
-      margin-top: -20%;
+      margin-top: -80px;
       z-index: 100; } }
 
 .card-bottom-container {
@@ -160,6 +167,10 @@ button {
 .input-container__img {
   height: 5rem;
   width: 5rem; }
+
+@media (max-width: 48em) {
+  .input-container {
+    margin-top: -80px; } }
 
 .error-message {
   opacity: 0;

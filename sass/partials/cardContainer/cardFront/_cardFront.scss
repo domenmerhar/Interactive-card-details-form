@@ -20,7 +20,7 @@
 
   @include phone {
     width: 90%;
-    margin-top: -20%;
+    margin-top: $phone-card-margin-top;
     z-index: 100;
   }
 }

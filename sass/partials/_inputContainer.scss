@@ -93,4 +93,8 @@
     height: $checkmark-size;
     width: $checkmark-size;
   }
+
+  @include phone {
+    margin-top: $phone-card-margin-top;
+  }
 }
