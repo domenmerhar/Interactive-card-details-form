@@ -127,10 +127,11 @@ label {
   display: flex;
   flex-direction: column;
   gap: 1.4rem;
-  width: 450px; }
+  max-width: 450px; }
   @media screen and (max-width: 48em) {
     .input-container__form {
-      gap: 0.5rem; }
+      gap: 0.5rem;
+      max-width: 400px; }
       .input-container__form > div:first-child,
       .input-container__form > div:nth-child(2) {
         height: 90px; }

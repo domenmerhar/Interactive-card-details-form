@@ -114,18 +114,18 @@ const validateCreditCard = (input) => {
   if (input.value.length !== input.maxLength) return
 
   if (!isCreditCardValid(input.value)) {
-    error.classList.add("error-message--shown")
+    if (!isMobile) error.classList.add("error-message--shown")
     return input.setCustomValidity("Credit card number does not exist")
   }
 }
 
 const validate = (input, error) => {
-  if (input.validationMessage === "") return
   if (input.dataset.input === "card-number") validateCreditCard(input)
+  if (isMobile) return
 
   if (input.validationMessage !== "") {
     error.textContent = input.validationMessage
-    return error.classList.add("error-message--shown")
+    error.classList.add("error-message--shown")
   }
 
   //If no error message, remove error message
@@ -134,7 +134,7 @@ const validate = (input, error) => {
 
 const trackInput = (input, element, error) => {
   input.addEventListener("input", (e) => {
-    if (!isMobile) validate(input, error)
+    validate(input, error)
 
     if (input.value === "") return (element.textContent = input.placeholder)
 
