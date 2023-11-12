@@ -9,9 +9,11 @@
 
   &__owner-name {
     text-transform: uppercase;
+    letter-spacing: 1px;
   }
 
   &__expiration-date {
+    letter-spacing: 1px;
   }
 
   @include phone {
