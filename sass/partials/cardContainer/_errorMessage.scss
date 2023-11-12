@@ -1,0 +1,8 @@
+.error-message,
+.input-container__form__card_errors {
+  @include phone {
+    opacity: 0;
+    display: none;
+    visibility: hidden;
+  }
+}
