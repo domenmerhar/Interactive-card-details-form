@@ -19,25 +19,25 @@ button {
   color: white; }
   .card-container-front__card-number {
     position: absolute;
-    bottom: 4.5rem;
-    left: 1rem;
+    bottom: 31%;
+    left: 4%;
     font-size: 2rem; }
 
 .card-bottom-container {
   font-weight: 500;
   position: absolute;
   bottom: 2rem;
-  left: 1rem;
+  left: 4%;
   display: flex;
   justify-content: space-between;
-  width: 25.5rem; }
+  width: 75%; }
   .card-bottom-container__owner-name {
     text-transform: uppercase; }
 
 .dot-container {
   position: absolute;
-  top: 1rem;
-  left: 1rem;
+  top: 10%;
+  left: 4%;
   display: flex;
   align-items: center;
   gap: 1rem; }
@@ -61,8 +61,8 @@ button {
   .card-container-back .card-container-back__CVC {
     color: white;
     position: absolute;
-    top: 6.3rem;
-    right: 3rem;
+    top: 40.5%;
+    right: 10.5%;
     font-size: 1.8rem; }
 
 .card-container {

@@ -2,10 +2,10 @@
   font-weight: 500;
   position: absolute;
   bottom: 2rem;
-  left: 1rem;
+  left: $card-left;
   display: flex;
   justify-content: space-between;
-  width: 25.5rem;
+  width: 75%;
 
   &__owner-name {
     text-transform: uppercase;
