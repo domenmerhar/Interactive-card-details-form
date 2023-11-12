@@ -45,6 +45,11 @@ const successMessageHTML = `
 const form = document.querySelector('[data-input="form"]')
 const inputContainer = document.querySelector('[data-input="container"]')
 
+const currentDate = new Date()
+
+const currentYear = currentDate.getFullYear()
+const currentMonth = currentDate.getMonth() + 1
+
 let isMobile
 
 function isCreditCardValid(cardNumber) {
