@@ -1,3 +1,9 @@
+@mixin chromebook {
+  @media screen and (max-width: 81em) {
+    @content;
+  }
+}
+
 @mixin phone {
   @media screen and (max-width: 48em) {
     @content;

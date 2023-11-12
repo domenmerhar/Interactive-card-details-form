@@ -30,7 +30,10 @@ body {
 
   background-image: url("../images/bg-main-desktop.png");
   background-repeat: no-repeat;
-  background-size: 32.1%;
+  background-size: 32.1% cover;
+
+  @include chromebook {
+  }
 
   @include phone {
     background-image: url("../images/bg-main-mobile.png");
@@ -39,9 +42,13 @@ body {
 }
 
 main {
-  width: 1300px;
+  max-width: 1300px;
   display: flex;
   gap: 15rem;
+
+  @include chromebook {
+    gap: 5rem;
+  }
 
   @include phone {
     width: 100%;
