@@ -24,16 +24,29 @@ This repository contains the source code for a dynamic website that features a c
 
 ## How to Use
 
+Choose one of the following options to explore the Interactive Card Details Form:
+
+### Option 1: Visit the Deployed Website
+
+Simply visit the following link to experience the deployed interactive credit card form:
+
+[Interactive Card Details Form](https://domenmerhar.github.io/Interactive-card-details-form/)
+
+### Option 2: Clone the Repository and Open Locally
+
 1. **Clone the Repository:**
 
+    If you prefer to explore the source code locally, you can clone the repository:
+
     ```bash
-    git clone https://github.com/your-username/credit-card-form.git
+    https://github.com/domenmerhar/Interactive-card-details-form.git
     ```
 
-2. **Open the Website:**
+2. **Open the Local Website:**
 
    Open the `index.html` file in your preferred web browser.
 
 3. **Experience the Dynamic Features:**
 
-   Enter the credit card details in the form, and witness the dynamic updates and validation.
+   Enter the credit card details in the form and witness the dynamic updates and validation.
+
