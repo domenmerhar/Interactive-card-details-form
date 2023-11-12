@@ -32,8 +32,8 @@ body {
   background-repeat: no-repeat;
   background-size: 34%;
 
-  @include tablet {
-    background-size: auto;
+  @include chromebook {
+    background-size: contain;
   }
 
   @include phone {

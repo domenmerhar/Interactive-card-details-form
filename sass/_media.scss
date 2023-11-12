@@ -1,5 +1,5 @@
 @mixin chromebook {
-  @media screen and (max-width: 81em) {
+  @media screen and (max-width: 91em) {
     @content;
   }
 }
