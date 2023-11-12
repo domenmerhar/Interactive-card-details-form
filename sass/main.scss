@@ -30,9 +30,10 @@ body {
 
   background-image: url("../images/bg-main-desktop.png");
   background-repeat: no-repeat;
-  background-size: 32.1% cover;
+  background-size: 34%;
 
-  @include chromebook {
+  @include tablet {
+    background-size: auto;
   }
 
   @include phone {
@@ -45,9 +46,14 @@ main {
   max-width: 1300px;
   display: flex;
   gap: 15rem;
+  transition: all 300ms ease-in-out;
 
   @include chromebook {
     gap: 5rem;
+  }
+
+  @include tablet {
+    gap: 1rem;
   }
 
   @include phone {

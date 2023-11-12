@@ -9,6 +9,10 @@
     gap: 1.4rem;
     max-width: 450px;
 
+    @include tablet {
+      max-width: 250px;
+    }
+
     @include phone {
       gap: 0.5rem;
       max-width: 400px;
@@ -47,11 +51,19 @@
       &-date {
         display: inline-block;
         max-width: 22%;
+
+        @include tablet {
+          max-width: 30%;
+        }
       }
 
       &-cvc {
         display: inline-block;
         max-width: 70%;
+
+        @include tablet {
+          max-width: 30%;
+        }
       }
     }
 
@@ -69,6 +81,10 @@
       position: relative;
       padding: 1rem 0;
 
+      @include tablet {
+        max-width: 300px;
+      }
+
       @include phone {
         margin-bottom: 20px;
       }
@@ -79,7 +95,11 @@
       }
 
       & label:last-child {
-        right: 12.2rem;
+        right: 43%;
+
+        @include tablet {
+          right: 16%;
+        }
       }
     }
 
