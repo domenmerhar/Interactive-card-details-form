@@ -1,6 +1,8 @@
 .input-container {
   @include phone {
     margin-top: $phone-card-margin-top;
+    width: 350px;
+    height: 350px;
   }
 
   &__form {

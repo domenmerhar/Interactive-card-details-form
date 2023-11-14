@@ -27,6 +27,8 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  padding: 0;
+  margin: 0;
 
   background-image: url("../images/bg-main-desktop.png");
   background-repeat: no-repeat;
@@ -57,11 +59,13 @@ main {
   }
 
   @include phone {
+    align-self: flex-start;
     width: 100%;
     flex-direction: column;
     gap: 1.5rem;
     justify-content: space-around;
-    height: 95%;
+    height: 95vh;
     align-items: center;
+    align-self: center;
   }
 }
