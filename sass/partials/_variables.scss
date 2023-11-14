@@ -10,9 +10,14 @@ $red-input-errors: hsl(0, 100%, 66%);
 $dot--big: 3rem;
 $dot-small: 1.5rem;
 
+@include phone {
+  $dot--big: 1.5rem;
+  $dot-small: 0.75rem;
+}
+
 $checkmark-size: 5rem;
 
 $card-left: 4%;
 
-$phone-card-margin-top: -80px;
+$phone-card-margin-top: -60px;
 $phone-checkmark-size: 120px;

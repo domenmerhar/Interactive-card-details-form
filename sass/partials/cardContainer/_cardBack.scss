@@ -10,7 +10,7 @@
 
   &__back-img {
     @include phone {
-      width: 350px;
+      width: 300px;
     }
   }
 
@@ -23,8 +23,8 @@
     letter-spacing: 1px;
 
     @include phone {
-      font-size: 1.4rem;
-      top: 41.5%;
+      font-size: 1.2rem;
+      top: 40%;
     }
   }
 }

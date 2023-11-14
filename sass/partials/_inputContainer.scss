@@ -1,7 +1,7 @@
 .input-container {
   @include phone {
     margin-top: $phone-card-margin-top;
-    width: 350px;
+    width: 320px;
     height: 350px;
   }
 
@@ -16,7 +16,7 @@
     }
 
     @include phone {
-      gap: 0.5rem;
+      gap: 0rem;
       max-width: 400px;
 
       & > div:first-child,
@@ -26,6 +26,10 @@
 
       input {
         height: 50px;
+
+        @include phone {
+          height: 40px;
+        }
       }
     }
 
@@ -72,6 +76,10 @@
     &__label {
       line-height: 3;
       text-transform: uppercase;
+
+      @include phone {
+        font-size: 0.9rem;
+      }
     }
 
     &__flex-input-container {
@@ -94,6 +102,7 @@
       & label {
         position: absolute;
         text-transform: uppercase;
+        font-size: 0.9rem;
       }
 
       & label:last-child {

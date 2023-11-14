@@ -10,17 +10,17 @@
     letter-spacing: 1px;
 
     @include phone {
-      font-size: 1.5rem;
+      font-size: 1.4rem;
     }
   }
 
   @include phone {
-    width: 90%;
+    width: 300px;
     margin-top: $phone-card-margin-top;
     z-index: 100;
 
     &__front-img {
-      width: 350px;
+      width: 300px;
     }
 
     margin-left: 10px;
