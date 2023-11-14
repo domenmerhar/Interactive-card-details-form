@@ -1,4 +1,4 @@
-# Dynamic Credit Card Details Form
+# Interactive Credit Card Details Form
 
 ## Overview
 
